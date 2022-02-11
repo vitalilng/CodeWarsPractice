@@ -11,7 +11,7 @@ namespace LearningCodeWars.Solutions
     {
         public static string HighAndLow(string stringOfNumbers)
         {
-            List<string> listOfStringNumbers = stringOfNumbers.Split(" ").ToList();
+            List<string> listOfStringNumbers = stringOfNumbers.Split().ToList();
 
             List<int> listOfNumbers = new();
 
@@ -20,7 +20,14 @@ namespace LearningCodeWars.Solutions
                 listOfNumbers.Add(int.Parse(stringNumber));
             }
 
+
             return $"{listOfNumbers.Max()} {listOfNumbers.Min()}";
+
+
+
+            ///Another way using LINQ
+            //var parsed = stringOfNumbers.Split().Select(int.Parse).ToList();
+            //return $"{parsed.Max()} {parsed.Min()}";
         }
     }
 }
