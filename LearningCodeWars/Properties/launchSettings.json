@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LearningCodeWars": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}
