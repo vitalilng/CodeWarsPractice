@@ -17,26 +17,26 @@ namespace LearningCodeWars.Solutions
     {
         public static int GetSum(int a, int b)
         {
-            //if (a == b) return a;
-            //if (a > b)
-            //{
-            //    int swap = a;
-            //    a = b;
-            //    b = swap;
-            //}
+            if (a == b) return a;
+            if (a > b)
+            {
+                int swap = a;
+                a = b;
+                b = swap;
+            }
 
-            //List<int> result = new();
+            List<int> result = new();
 
-            //for (int i = a; i <= b; i++)
-            //{
-            //    result.Add(i);
-            //}
+            for (int i = a; i <= b; i++)
+            {
+                result.Add(i);
+            }
 
-            //return result.Sum();
+            return result.Sum();
 
-            return (a + b) * (Math.Abs(a - b) + 1) / 2;
+            //return (a + b) * (Math.Abs(a - b) + 1) / 2;
 
 
-        }
+         }
     }
 }
