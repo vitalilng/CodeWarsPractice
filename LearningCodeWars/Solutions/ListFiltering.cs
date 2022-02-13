@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace LearningCodeWars.Solutions
 {
@@ -16,6 +17,10 @@ namespace LearningCodeWars.Solutions
                 }
             }
             return listOfNumbers;
+
+
+            ///another solution from codewars
+            //return listOfItems.OfType<int>();
         }
     }
 }
