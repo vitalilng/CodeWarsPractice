@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace LearningCodeWars.JadenCasingStrings
 {
@@ -17,5 +12,16 @@ namespace LearningCodeWars.JadenCasingStrings
                     "How can mirrors be real if our eyes aren't real".ToJadenCase(),
                     "Strings didn't match.");
         }
+
+        [Test]
+        [Description("starting with lower case")]
+        public void RandomTest()
+        {
+            Assert.AreEqual("Tfif Vbt Xm Tmmhtgkhqr Ydjbjabe Sdvvszul Zrdpxz Vlm Pnqbm Butst Tt Prq",
+                            "tfif vbt xm tmmhtgkhqr ydjbjabe sdvvszul zrdpxz vlm pnqbm butst tt prq".ToJadenCase(),
+                            "Strings didn't match.");
+        }
+
+
     }
 }
