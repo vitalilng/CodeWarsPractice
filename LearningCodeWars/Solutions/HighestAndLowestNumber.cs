@@ -4,7 +4,6 @@ using System.Linq;
 /// <summary>
 /// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 /// </summary>
-
 namespace LearningCodeWars.Solutions
 {
     public static class HighestAndLowestNumber
@@ -20,14 +19,14 @@ namespace LearningCodeWars.Solutions
                 listOfNumbers.Add(int.Parse(stringNumber));
             }
 
-
             return $"{listOfNumbers.Max()} {listOfNumbers.Min()}";
+        }
 
-
-
+        public static string HighAndLowUsingLinq(string stringOfNumbers)
+        {
             ///Another way using LINQ
-            //var parsed = stringOfNumbers.Split().Select(int.Parse).ToList();
-            //return $"{parsed.Max()} {parsed.Min()}";
+            var parsed = stringOfNumbers.Split().Select(int.Parse).ToList();
+            return $"{parsed.Max()} {parsed.Min()}";
         }
     }
 }

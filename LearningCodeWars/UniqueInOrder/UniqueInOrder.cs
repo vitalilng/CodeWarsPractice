@@ -28,55 +28,60 @@ namespace LearningCodeWars.UniqueInOrder
             }
 
             return listOfObjects;
+        }
 
+        /// <summary>
+        /// Another solution from Codewars
+        /// </summary>
+        public static IEnumerable<T> GetUniqueInOrderUsingLinq<T>(IEnumerable<T> iterable)
+        {
+            T previous = default;
 
+            foreach (var current in iterable)
+            {
+                if (!current.Equals(previous))
+                {
+                    previous = current;
+                    yield return current;
+                }
+            }
+        }
 
+        /// <summary>
+        /// Another solution from Codewars
+        /// </summary>
+        public static IEnumerable<T> GetUniqueInOrderUsingForEach<T>(IEnumerable<T> iterable)
+        {
+            var retlist = new List<T>();
+            foreach (var item in iterable)
+            {
+                if (!item.Equals(retlist.LastOrDefault()))
+                {
+                    retlist.Add(item);
+                }
+            }
+            return retlist;
+        }
 
-
-            ///Another solution from codewars
-            //T previous = default(T);
-
-            //foreach (var current in iterable)
-            //{
-            //    if (!current.Equals(previous))
-            //    {
-            //        previous = current;
-            //        yield return current;
-            //    }
-            //}
-
-
-            ///Another solution from Codewars
-            //var retlist = new List<T>();
-            //foreach (var item in iterable)
-            //{
-            //    if (!item.Equals(retlist.LastOrDefault()))
-            //    {
-            //        retlist.Add(item);
-            //    }
-            //}
-
-            //return retlist;
-
-
-            ///Another solution from Codewars
-            //var e = iterable.GetEnumerator();
-            //if (e.MoveNext())
-            //{
-            //    var current = e.Current;
-            //    while (e.MoveNext())
-            //    {
-            //        if (!e.Current.Equals(current))
-            //        {
-            //            yield return current;
-            //            current = e.Current;
-            //        }
-            //    }
-            //    yield return current;
-            //}
-
-
-
+        /// <summary>
+        /// Another solution from Codewars
+        /// </summary>
+        public static IEnumerable<T> GetUniqueInOrderUsingGetEnumerator<T>(IEnumerable<T> iterable)
+        {
+            var e = iterable.GetEnumerator();
+            if (e.MoveNext())
+            {
+                var current = e.Current;
+                while (e.MoveNext())
+                {
+                    if (!e.Current.Equals(current))
+                    {
+                        yield return current;
+                        current = e.Current;
+                    }
+                }
+                yield return current;
+            }
         }
     }
 }
