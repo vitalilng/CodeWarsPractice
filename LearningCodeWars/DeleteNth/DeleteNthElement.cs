@@ -1,4 +1,7 @@
-﻿/// <summary>
+﻿using System.Collections.Generic;
+using System.Linq;
+
+/// <summary>
 /// Given a list lst and a number N, create a new list that contains each number of lst at most N
 /// times without reordering. For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take
 /// [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times,
@@ -8,7 +11,39 @@ namespace LearningCodeWars.DeleteNth
 {
     public static class DeleteNthElement
     {
-        public static int[] DeleteNth(int[] arr, int x)
+        ///// <summary>
+        /////Solve using List<>
+        ///// </summary>
+        public static int[] DeleteNthUsingList(int[] arr, int x)
+        {
+            List<int> listArray = arr.ToList();
+
+            for (int i = 0; i < listArray.Count - 1; i++)
+            {
+                int nrOfRepetitions = 1;
+
+                for (int j = i + 1; j < listArray.Count; j++)
+                {
+                    if (listArray[i].Equals(listArray[j]))
+                    {
+                        nrOfRepetitions++;
+                    }
+
+                    if (nrOfRepetitions > x)
+                    {
+                        listArray.RemoveAt(j);
+                        j--;
+                        nrOfRepetitions--;
+                    }
+                }
+            }
+            return listArray.ToArray();
+        }
+
+        ///// <summary>
+        /////Solve using Array
+        ///// </summary>
+        public static int[] DeleteNthUsingArray(int[] arr, int x)
         {
             int nrOfOcurrences = x;
 
