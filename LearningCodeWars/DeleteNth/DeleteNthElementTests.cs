@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 
 namespace LearningCodeWars.DeleteNth
 {
@@ -26,7 +25,6 @@ namespace LearningCodeWars.DeleteNth
             CollectionAssert.AreEqual(expected, actual);
         }
 
-
         [Test]
         public void TestSimple3()
         {
@@ -37,6 +35,24 @@ namespace LearningCodeWars.DeleteNth
             CollectionAssert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void TestSimple4()
+        {
+            int[] expected = new int[] { 3, 3, 2, 3, 1, 2, 1, 2 };
 
+            int[] actual = DeleteNthElement.DeleteNth(new int[] { 3, 3, 2, 3, 1, 2, 1, 2, 3, 2 }, 3);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void TestSimple5()
+        {
+            int[] expected = new int[] { 3, 2, 1, 1, 2, 3 };
+
+            int[] actual = DeleteNthElement.DeleteNth(new int[] { 3, 2, 1, 1, 2, 3, 1, 2, 3, 2 }, 2);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }
