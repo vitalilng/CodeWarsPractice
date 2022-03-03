@@ -21,7 +21,5 @@ namespace LearningCodeWars.JadenCasingStrings
                             "tfif vbt xm tmmhtgkhqr ydjbjabe sdvvszul zrdpxz vlm pnqbm butst tt prq".ToJadenCase(),
                             "Strings didn't match.");
         }
-
-
     }
 }

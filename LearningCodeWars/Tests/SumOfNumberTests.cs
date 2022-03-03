@@ -18,6 +18,5 @@ namespace LearningCodeWars.Tests
             Assert.AreEqual(-3, SumOfNumbers.GetSum(-2, -1));
             Assert.AreEqual(5, SumOfNumbers.GetSum(-1, 3));
         }
-
     }
 }

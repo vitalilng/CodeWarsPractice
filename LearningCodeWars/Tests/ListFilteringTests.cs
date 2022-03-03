@@ -17,6 +17,7 @@ namespace Solution
             var actual = ListFiltering.GetIntegersFromList(list);
             Assert.IsTrue(expected.SequenceEqual(actual));
         }
+
         [Test]
         public void GetIntegersFromList_MixedValues_ShouldPass_2()
         {
@@ -25,6 +26,7 @@ namespace Solution
             var actual = ListFiltering.GetIntegersFromList(list);
             Assert.IsTrue(expected.SequenceEqual(actual));
         }
+
         [Test]
         public void GetIntegersFromList_MixedValues_ShouldPass_3()
         {
