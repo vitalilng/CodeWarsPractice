@@ -46,7 +46,7 @@ namespace LearningCodeWars.SumStringsAsNumbers
             return sum.ToString();
         }
 
-        public static string SumStringUsingTryParse(string a, string b)
+        public static string SumStringUsingBigInteger(string a, string b)
         {
             BigInteger.TryParse(a, out BigInteger bigStringA);
             BigInteger.TryParse(b, out BigInteger bigStringB);

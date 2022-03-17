@@ -1,0 +1,7 @@
+
+*.testlog
+.vs/CodeWarsPractice/v16/TestStore/0/testlog.manifest
+.vs/CodeWarsPractice/v16/.suo
+*.cache
+*.cache
+LearningCodeWars/obj/LearningCodeWars.csproj.nuget.dgspec.json
